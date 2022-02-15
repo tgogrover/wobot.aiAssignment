@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "ff2c6f45-914d-4d38-8b9a-90f3b48d1260",
+		"name": "wobot.ai",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3005/api/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"password\":\"8950887756\",\"username\":\"tushar123\",\"firstName\":\"tushar\",\"lastName\":\"grover\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3005/api/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3005/api/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"tushar123\",\"password\":\"8950887756\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3005/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3005/api/productUpload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorisation",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjBiYzI5ZmJkMDAzZTIzNTRmYmU0MmYiLCJ1c2VybmFtZSI6InR1c2hhcjEyMyIsImlhdCI6MTY0NDkzOTU3NX0.gaK4IP2uy1HEnwurPNywJw0Y0OtgI0rtVI_bheVEzXs ",
+						"type": "string"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "csv",
+							"type": "file",
+							"src": "/C:/Users/HP/Desktop/wobot.ai/product.csv"
+						},
+						{
+							"key": "id",
+							"value": "620bc29fbd003e2354fbe42f",
+							"type": "string",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3005/api/productUpload",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"productUpload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3005/api/fetchProductLists",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorisation",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjBiYzI5ZmJkMDAzZTIzNTRmYmU0MmYiLCJ1c2VybmFtZSI6InR1c2hhcjEyMyIsImlhdCI6MTY0NDkzOTU3NX0.gaK4IP2uy1HEnwurPNywJw0Y0OtgI0rtVI_bheVEzXs ",
+						"type": "string"
+					}
+				],
+				"url": {
+					"raw": "localhost:3005/api/fetchProductLists",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"fetchProductLists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3005/api/fetch/userDetails/620bc29fbd003e2354fbe42f",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorisation",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjBiYzI5ZmJkMDAzZTIzNTRmYmU0MmYiLCJ1c2VybmFtZSI6InR1c2hhcjEyMyIsImlhdCI6MTY0NDkzOTU3NX0.gaK4IP2uy1HEnwurPNywJw0Y0OtgI0rtVI_bheVEzXs ",
+						"type": "string"
+					}
+				],
+				"url": {
+					"raw": "localhost:3005/api/fetch/userDetails/620bc29fbd003e2354fbe42f",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"fetch",
+						"userDetails",
+						"620bc29fbd003e2354fbe42f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3005/logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3005/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3005/api/fetch/userLists",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorisation",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjBiYzI5ZmJkMDAzZTIzNTRmYmU0MmYiLCJ1c2VybmFtZSI6InR1c2hhcjEyMyIsImlhdCI6MTY0NDk1MTg5MH0.JjT4_ppFFwWrYy0wBUjfjd7cuapJOjg2KTqUqHNPRh8 ",
+						"type": "string"
+					}
+				],
+				"url": {
+					"raw": "localhost:3005/api/fetch/userLists",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"fetch",
+						"userLists"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
